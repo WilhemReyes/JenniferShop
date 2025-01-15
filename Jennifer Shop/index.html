@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jennifer - Tienda Online</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Jennifer</h1>
+            <button id="menu-toggle" class="menu-toggle" title="Abrir menú de navegación">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <input type="text" id="search-bar" placeholder="Buscar productos...">
+            <button id="theme-toggle" title="Cambiar modo oscuro/claro">Modo Oscuro</button>
+            <button id="cart-toggle" title="Ver carrito de compras">Carrito (0)</button>
+        </div>
+    </header>
+    
+    <main>
+        <section id="hero">
+            <h2 class="hero-title">Bienvenido</h2>
+            <p>Elegancia y estilo en cada producto.</p>
+            <button onclick="verProductos()" title="Ver productos">Ver Productos</button>
+        </section>
+        
+        <section id="productos">
+            <h2>Nuestros Productos</h2>
+            <div class="productos-filtros">
+                <label for="filtro-productos">Filtrar por:</label>
+                <select id="filtro-productos" name="filtro-productos">
+                    <option value="todos">Todos</option>
+                    <option value="ropa">Ropa</option>
+                    <option value="accesorios">Accesorios</option>
+                    <option value="artesanales">Artesanales</option>
+                </select>
+            </div>
+            <div class="productos-lista">
+                <!-- Aquí se insertarán los productos mediante JavaScript -->
+            </div>
+        </section>
+        
+        <section id="galeria">
+            <h2>Galería de Imágenes</h2>
+            <div class="galeria-container">
+                <div class="galeria-item"><img src="images/1.jpg" alt="Imagen 1"></div>
+                <div class="galeria-item"><img src="images/2.jpg" alt="Imagen 2"></div>
+                <div class="galeria-item"><img src="images/3.jpg" alt="Imagen 3"></div>
+            </div>
+        </section>
+        
+        <section id="testimonios">
+            <h2>Testimonios de Clientes</h2>
+            <div class="testimonios-container">
+                <div class="testimonio-item">
+                    <p>"¡Amo esta tienda! Los productos son de excelente calidad y el servicio es increíble."</p>
+                    <span>- Cliente Satisfecho</span>
+                </div>
+                <div class="testimonio-item">
+                    <p>"Recibí mi pedido rápidamente y todo estaba perfecto. ¡Muy recomendable!"</p>
+                    <span>- Cliente Feliz</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <h4>¿Cómo realizo un pedido?</h4>
+                <p>Puedes realizar un pedido seleccionando el producto que deseas y haciendo clic en "Compra ya".</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Cuáles son los métodos de pago aceptados?</h4>
+                <p>Aceptamos tarjetas de crédito, débito y PayPal.</p>
+            </div>
+        </section>
+        
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Para más información, contáctanos en: <a href="mailto:info@jennifer.com">info@jennifer.com</a></p>
+            <h3>Suscríbete a nuestras noticias</h3>
+            <form id="subscription-form">
+                <input type="email" id="email" placeholder="Ingresa tu email" required>
+                <button type="submit" title="Suscribirse a noticias">Suscribirse</button>
+            </form>
+            <p id="subscription-message"></p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Jennifer. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="cart" class="cart-container">
+        <h2>Carrito de Compras</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button id="checkout" title="Finalizar compra">Finalizar Compra</button>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+s
